@@ -5,13 +5,14 @@ tasks = []
 cursor = ">"
 
 def add_task(task):
-    pass
+    tasks.append(task)
 
 def remove_task(task):
     pass
 
 def display_tasks():
-    pass
+    for task in tasks:
+        print(task)
 
 def quit_app():
     quit()
@@ -28,11 +29,17 @@ while True:
     chosen = input("Please Select What You Would Like To Do Next (Enter A Numerical Value) " + cursor + " ")
 
     if (int(chosen) == 1):
-        pass
+        clear_screen()
+        user_task = input("Enter A Task: " + cursor + " ")
+        add_task(user_task)
+        clear_screen()
     elif (int(chosen) == 2):
         pass
     elif (int(chosen) == 3):
-        pass
+        clear_screen()
+        display_tasks()
+        input("\nPress Any Key To Go Back")
+        clear_screen()
     elif (int(chosen) == 4):
         quit_app()
     else:
