@@ -1,3 +1,3 @@
 # Python Todo Console App
 
-`python main.py` To Run The Program. Make Sure you have python installed, if not https://www.python.org/.
+`python main.py` To Run The Program. Make Sure you have python installed on your computer to run the program, https://www.python.org/.
