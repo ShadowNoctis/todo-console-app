@@ -6,9 +6,20 @@ cursor = ">"
 
 def add_task(task):
     tasks.append(task)
+    clear_screen()
+    input("Task Added Successfully! Press Any Key To Go Back.")
 
 def remove_task(task):
-    pass
+    for taskInArray in tasks:
+        if taskInArray == task:
+            tasks.remove(task)
+            clear_screen()
+            input("Task Removed Successfully! Press Any Key To Go Back.")
+            clear_screen()
+        else:
+            clear_screen()
+            input("No Task Found. Press Any Key To Go Back.")
+            clear_screen()
 
 def display_tasks():
     for task in tasks:
@@ -34,7 +45,9 @@ while True:
         add_task(user_task)
         clear_screen()
     elif (int(chosen) == 2):
-        pass
+        clear_screen()
+        user_task_remove = input("Which task to remove " + cursor + " ")
+        remove_task(user_task_remove)
     elif (int(chosen) == 3):
         clear_screen()
         display_tasks()
